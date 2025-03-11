@@ -47,6 +47,7 @@ enableInlineShortcodes = true
   author = 'Camille Teicheira'
   newsletter = 'https://dashboard.mailerlite.com/forms/1197290/139047052633965606/share'
   description = 'This is a solar-powered website, which means it sometimes goes offline'
+  donate = 'https://opencollective.com/sequoia-fabrica'
 
 [menu]
   [[menu.main]]
