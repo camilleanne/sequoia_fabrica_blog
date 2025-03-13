@@ -27,7 +27,7 @@ We've tried to make the process for membership as straightforward as possible. I
 
 2. **Apply:** If you decide that Sequoia Fabrica is the right fit for you, complete our [membership application form](https://forms.gle/r3AytzzxeKX7NUaM8).
 
-3. **Sign up for an Orientation:** <a href={urlConstants.bookWhen} data-goatcounter-click={urlConstants.bookWhen}>Member applicant orientations</a> are 1st and 3rd Tuesdays at 7PM every month. If this time will not work, [get in touch](./contact).
+3. **Sign up for an Orientation:** <a href={{< param Events >}}>Member applicant orientations</a> are 1st and 3rd Tuesdays at 7PM every month. If this time will not work, [get in touch](./contact).
 
 4. **Application Review** Our Board and Membership will evaluate your application. We will update you on your application status.
 

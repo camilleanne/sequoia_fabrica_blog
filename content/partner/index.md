@@ -12,7 +12,7 @@ featured_image: ""
 ---
 
 
-Reach out to us at <a href={urlConstants.mailto}>sequoiafabrica@gmail.com</a> and let's discuss how we can make something amazing together!
+Reach out to us at <a href="mailto:{{< param email >}}">{{< param email >}}</a> and let's discuss how we can make something amazing together!
 
 ## Community Collaboration
 

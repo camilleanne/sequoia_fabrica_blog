@@ -51,6 +51,8 @@ enableInlineShortcodes = true
   events = 'https://bookwhen.com/sequoiafabrica#focus=ev-s5jb-20250313160000'
   wiki = 'https://wiki.sequoiafabrica.org/wiki/Main_Page'
   email = 'info@sequoiafabrica.org'
+  mastadon = ''
+  instagram = ''
 
 [menu]
   [[menu.main]]
