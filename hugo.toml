@@ -48,23 +48,47 @@ enableInlineShortcodes = true
   newsletter = 'https://dashboard.mailerlite.com/forms/1197290/139047052633965606/share'
   description = 'This is a solar-powered website, which means it sometimes goes offline'
   donate = 'https://opencollective.com/sequoia-fabrica'
+  events = 'https://bookwhen.com/sequoiafabrica#focus=ev-s5jb-20250313160000'
+  wiki = 'https://wiki.sequoiafabrica.org/wiki/Main_Page'
+  email = 'info@sequoiafabrica.org'
 
 [menu]
   [[menu.main]]
     identifier = 'about'
     name = 'About'
-    url = 'https://sequoiafabrica.org/docs/about'
+    url = '/about'
     weight = 1
   [[menu.main]]
-    identifier = 'mainsitetitle'
-    name = 'sequoiafabrica.org'
-    url = 'https://sequoiafabrica.org'
+    identifier = 'events'
+    name = 'Events'
+    url = 'https://bookwhen.com/sequoiafabrica'
     weight = 2
   [[menu.main]]
     identifier = 'donate'
     name = 'Donate'
     url = 'https://opencollective.com/sequoia-fabrica'
     weight = 3
+  [[menu.main]]
+    identifier = 'membership'
+    name = 'Membership'
+    url = '/membership'
+    weight = 4
+  [[menu.main]]
+    identifier = 'faq'
+    name = 'FAQ'
+    url = '/faq'
+    weight = 5
+  [[menu.main]]
+    identifier = 'partner'
+    name = 'Partner'
+    url = '/partner'
+    weight = 6
+  [[menu.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    url = '/contact'
+    weight = 7
+
 
 [languages]
   [languages.en]

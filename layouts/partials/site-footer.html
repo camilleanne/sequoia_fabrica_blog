@@ -2,16 +2,22 @@
     <a href="{{ absLangURL "https://sequoiafabrica.org/docs/about" }}">
   {{ i18n "about"| default "About"}}
 </a>
+<a href="{{ .Site.Params.Wiki }}">
+  {{ i18n "power"| default "Wiki"}}
+</a>
     <a href="{{ absLangURL "power" }}">
   {{ i18n "power"| default "Power"}}
 </a>
-    <a href="{{ absLangURL "about/team" }}">
-  {{ i18n "team"| default "Colophon"}}
+<a href="{{ absLangURL "contact" }}">
+  {{ i18n "team"| default "Contact"}}
 </a>
     <a href="{{ .Site.Params.Donate }}">
   {{ i18n "donate"| default "Donate"}}
 </a>
 <a href="/privacy">
   {{ i18n "privacy"| default "Privacy Policy"}}
+</a>
+<a href="{{ absLangURL "code-of-conduct" }}">
+  {{ i18n "team"| default "Code of Conduct"}}
 </a>
 </div>
