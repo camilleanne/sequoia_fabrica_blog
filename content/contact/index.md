@@ -1,14 +1,11 @@
 ---
 title: "Contact"
-date: ""
 summary: "Get in touch with Sequoia Fabrica Makerspace."
+slug: contact
 lang: "en"
-authors: [""]
 categories: [""]
-tags: [""]
-unlisted: true
-draft: false
 featured_image: ""
+url: "contact"
 ---
 
 Sequoia Fabrica run by members and volunteers. If you need to contact the board of directors, you can send an email to <a href="mailto:{{< param email >}}">{{< param email >}}</a>
@@ -19,7 +16,6 @@ You can follow updates on our organization through the platforms below, or if yo
 
 
 ## Follow us on Social Media
-<!-- TODO: -->
 - <a href={{< param Instagram >}}>Instagram</a>
 - <a href={{< param Mastadon >}}>Mastodon</a>
 - <a href={{< param Events >}} >Events</a>

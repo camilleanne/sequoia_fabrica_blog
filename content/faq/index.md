@@ -1,13 +1,9 @@
 ---
 title: "Frequently Asked Questions"
-date: ""
 summary: "Frequently asked questions about Sequoia Fabrica Makerspace."
+slug: "faq"
+url: "faq"
 lang: "en"
-authors: [""]
-categories: [""]
-tags: [""]
-unlisted: true
-draft: false
 featured_image: ""
 ---
 

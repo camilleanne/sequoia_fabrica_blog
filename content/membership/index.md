@@ -1,14 +1,10 @@
 ---
 title: "Membership at Sequoia Fabrica"
-date: ""
 summary: ""
 lang: "en"
-authors: [""]
-categories: [""]
-tags: [""]
-unlisted: true
-draft: false
 featured_image: ""
+slug: "membership"
+url: "membership"
 ---
 
 ## Join Our Community

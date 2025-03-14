@@ -1,14 +1,10 @@
 ---
 title: "Code of Conduct"
-date: ""
 summary: "Sequoia Fabrica's Code Of Conduct"
 lang: "en"
-authors: [""]
 categories: [""]
-tags: [""]
-unlisted: true
-draft: false
 featured_image: ""
+url: "code-of-conduct"
 ---
 
 
@@ -42,6 +38,6 @@ All members and visitors can ask anyone violating this code of conduct or making
 
 The Board can investigate and take further action if they deem it appropriate, including warning, loss of privileges, suspension of membership, temporary or permanent expulsion from Sequoia Fabrica spaces and events without refund or notice. 
 
-Contact the Board with any questions or concerns in person, by text or voicemail at (415) 935-0478, or by email at [info@sequoiafabrica.org](mailto:info@sequoiafabrica.org).
+Contact the Board with any questions or concerns in person, by text or voicemail at (415) 935-0478, or by email at <a href="mailto:{{< param email >}}">{{< param email >}}</a>.
 
 Last updated: Oct 20, 2024

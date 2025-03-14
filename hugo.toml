@@ -53,6 +53,7 @@ enableInlineShortcodes = true
   email = 'info@sequoiafabrica.org'
   mastadon = ''
   instagram = ''
+  tiktok = ''
 
 [menu]
   [[menu.main]]
