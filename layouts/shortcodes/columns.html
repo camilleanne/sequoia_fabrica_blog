@@ -1,0 +1,14 @@
+{{- $size := default "regular" (.Get "size" | lower) }}
+
+{{- if not (in (slice "regular" "large" "small") $size) }}
+  {{- $size = "regular" }}
+{{- end }}
+
+
+<div class="columns columns--{{ $size }}">
+  {{- range split .Inner "<--->" }}
+    <div class="columns__content">
+      {{ . | $.Page.RenderString -}}
+    </div>
+  {{- end }}
+</div>

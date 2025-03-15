@@ -33,7 +33,10 @@
     --color-primary: black;
     --color-sky: #f0f8ff;
     --color-sub: rgb(130 130 130);
-    --color-bg: #fff5d1;
+    // --color-bg: #d1ffe8;
+    --color-bg: rgb(229, 231, 235);
+    --color-links: rgb(194 65 12);
+    // --color-bg: #c3f9c3;
     --color-low: #162dab;
     --color-high: #d11305;
     --color-obs: #006951;
@@ -66,7 +69,12 @@
 }
 
 html {
-    font-size: 20px;
+    // font-size: 20px;
+    // font-family: sans-serif;
+
+    font-size: 16px;
+    font-family: monospace;
+
 }
 
 body {
@@ -103,6 +111,11 @@ a {
         color: var(--color-sub);
         text-decoration: none;
     }
+}
+
+.article a {
+    color: var(--color-links);
+
 }
 
 code {
@@ -143,8 +156,15 @@ footer {
     h1 {
         text-transform: uppercase;
     }
+
 }
 
+.sf_logo {
+    width: 600px;
+    margin: 0 auto;
+    display: inline-block;
+
+}
 
 /*---------------------
 BACKGROUND and BATTERY METER
@@ -1223,6 +1243,16 @@ footer .weather_text {
 
 
 /*---------------
+{{< columns >}}
+------------*/
+
+.columns {
+    margin: 2rem 8rem;
+    columns: 2 2rem;
+  }
+
+
+/*---------------
 Global Responsive Styles
 ------------*/
 
@@ -1308,5 +1338,7 @@ Global Responsive Styles
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
 
 @import "_print";

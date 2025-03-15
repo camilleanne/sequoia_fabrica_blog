@@ -2,7 +2,7 @@
 title: ""
 summary: "A volunteer-run, membership-based, community workshop in San Francisco. Classes and tools for woodworking, sewing, electronics, fabrication, crafts and fine arts."
 lang: "en"
-featured_image: ""
+featured_image: "banner_1.jpg"
 layout: "index"
 url: "/"
 categories: [""]
@@ -14,22 +14,26 @@ We are a volunteer-run 501(c)(3) non-profit, and host [classes, events and works
 
 We offer [memberships](/membership) for makers who want to access the space and equipment outside of classes. Want to teach a class or organize an event at our workshop? Please [contact us](/contact).
 
-<!-- TODO: bring back columns? -->
+{{% figure src="banner_1.jpg" %}} 
+Some of the lovely tools in our woodshop
+{{% /figure %}}
+
+{{< columns size=small >}}
 ## Visit and Learn a New Skill
 
 We are open to the public for events.
 
 Sign-up [for a class]({{< param events >}}), or [contact us](/contact).
 
+<--->
+
 ## Stay in Touch!
 📬 [Join our Newsletter]({{< param newsletter >}}) 📬
 ### Follow Us
-<a href={{< param Instagram >}}>Instagram</a>
-
-<a href={{< param Mastadon >}}>Mastodon</a>
-
-<a href={{< param tiktok >}} >TikTok</a>
+[Instagram]({{< param Instagram >}})  |  [Mastodon]({{< param Mastadon >}})  |  [TikTok]({{< param tiktok >}})
     
+
+{{</ columns >}}
 
 <div id="calendar" className="col-span-2">
     <Calendar urls={[getCalendar('bookwhen')]} />

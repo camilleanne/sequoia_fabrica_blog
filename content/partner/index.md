@@ -1,13 +1,9 @@
 ---
-title: "Partner with Sequoia Fabrica"
-date: ""
+title: "Partnerships"
 summary: "How to partner with Sequoia Fabrica"
 lang: "en"
-authors: [""]
-categories: [""]
-tags: [""]
-unlisted: true
-draft: false
+slug: "partner"
+url: "partner"
 featured_image: ""
 ---
 

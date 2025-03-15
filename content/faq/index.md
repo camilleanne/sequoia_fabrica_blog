@@ -21,7 +21,7 @@ Find us on [OpenStreetMap](https://www.openstreetmap.org/node/11571985859) or [G
 
 The makerspace is open to the general public for regular, hosted [events and workshops]({{< param Events >}}). Anyone is welcome to sign up and attend these! RSVP is required, unless stated.
  
-If you’d like access to the facility or to use equipment at other times, you must [become a member](./membership) or [volunteer](https://wiki.sequoiafabrica.org/wiki/Volunteers)!
+If you’d like access to the facility or to use equipment at other times, you must [become a member](/membership) or [volunteer](https://wiki.sequoiafabrica.org/wiki/Volunteers)!
 
 If this model does not meet your needs, there are many [makerspaces in the Bay Area](https://makernexuswiki.com/wiki/Maker_Spaces_In_San_Francisco_area) and [around the world](https://wiki.hackerspaces.org/List_of_Hacker_Spaces).
 
@@ -55,15 +55,15 @@ Cricut Vinyl Cutter.
 
 Our workshop is run by volunteers and we typically do not have the capacity to schedule one-off tours.
 
-If you'd like to see the space please [sign up for an event]({{< param Wiki >}}). If you're an organization looking to partner, please [reach out to us](./contact). 
+If you'd like to see the space please [sign up for an event]({{< param Wiki >}}). If you're an organization looking to partner, please [reach out to us](/contact). 
 
-## When will you have a class on X?
+## When will you have a class on _{some topic}_?
 
 Instructors are volunteers, so classes vary by month and are added weekly! 
 
 If a class is sold out, join the waiting list. This helps us gauge demand, we'll reach out if we add a new session.
 
-If you want to volunteer to teach a class, [email us](./contact).
+If you want to volunteer to teach a class, [email us](/contact).
 
 ## How does membership work?
 
@@ -71,7 +71,7 @@ All prospective members should visit our space, complete an application, and sig
 
 Members are responsible for contributing to the upkeep of our shared space. Hosting classes is encouraged, you don’t need to be a subject matter expert!
 
-Please review our [membership page](./membership) for more information! 
+Please review our [membership page](/membership) for more information! 
 
 You must be 18 years of age or older to become a member. Members may bring family members or friends as their guests. 
 

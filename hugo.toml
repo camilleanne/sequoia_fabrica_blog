@@ -91,6 +91,11 @@ enableInlineShortcodes = true
     name = 'Contact'
     url = '/contact'
     weight = 7
+  [[menu.main]]
+    identifier = 'blog'
+    name = 'Blog'
+    url = '/posts'
+    weight = 8
 
 
 [languages]

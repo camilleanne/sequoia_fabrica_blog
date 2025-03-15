@@ -1,7 +1,6 @@
 ---
 title: "About Sequoia Fabrica"
-date: ""
-summary: ""
+summary: " "
 lang: "en"
 authors: [""]
 categories: [""]
@@ -18,8 +17,8 @@ Our organization was founded November 2023. We are supported by donations and me
 
 ## What We Offer 
 
-* Weekly [classes and events](./events), open to the public, on subjects including arts, crafts, technology, and tools. 
-* Affordable [memberships](./membership), access to equipment and infrastructure for learning, arts, prototyping and creative projects.
+* Weekly [classes and events](/events), open to the public, on subjects including arts, crafts, technology, and tools. 
+* Affordable [memberships](/membership), access to equipment and infrastructure for learning, arts, prototyping and creative projects.
 * Physical space for exhibitions, meetups, community and educational events.
 
 ## Our Impact
@@ -48,8 +47,8 @@ We believe in the transformative power of access to tools and technology. Our mi
 
 ## Join Our Community
 
-Whether you're a seasoned maker, a curious beginner, or someone who believes in the power of community and creativity, there's a place for you here. We're always searching for [members](./membership) and [volunteers](https://wiki.sequoiafabrica.org/wiki/Volunteers) to help maintain the space, run classes, and welcome others. 
+Whether you're a seasoned maker, a curious beginner, or someone who believes in the power of community and creativity, there's a place for you here. We're always searching for [members](/membership) and [volunteers](https://wiki.sequoiafabrica.org/wiki/Volunteers) to help maintain the space, run classes, and welcome others. 
 
 ## Still Have Questions?
 
-Take a look at our [FAQ](./faq) page.
+Take a look at our [FAQ](/faq) page.
