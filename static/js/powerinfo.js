@@ -43,7 +43,7 @@ function getAcInfo() {
 function getCpuTemperature() {
   // e.g. reading “60000” means 60.0 °C
   const tempMilliC = parseInt(readFileString(CPU_TEMP_PATH), 10);
-  return (tempMilliC / 1000).toFixed(1);
+  return (tempMilliC / 1000).toFixed(2);
 }
 
 // Get 1, 5, and 15-minute load average
@@ -101,14 +101,14 @@ function getPowerData() {
 
   // Build the data object that your populateData() function expects
   return {
-    local_time: new Date().toLocaleString(),
+    local_time: new Date().toLocaleString("en-US",  { timeZone: "America/Los_Angeles" }),
     uptime: (getUptime() / 3600).toFixed(2) + " hours", // or format more nicely
-    W: powerUsage + " W",
-    A: acCurrent.toFixed(3) + " A",
-    V: acVoltage.toFixed(3) + " V",
+    W: powerUsage + "W",
+    A: acCurrent.toFixed(3) + "A",
+    V: acVoltage.toFixed(3) + "V",
     temperature: cpuTemp,
     load_15: load15,
-    charging: charging ? "Yes" : "No",
+    charging: charging ? "yes" : "no",
     charge: batteryCapacity,
   };
 }
