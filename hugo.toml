@@ -13,6 +13,9 @@ pluralizelisttitles = 'false'
 refLinksErrorLevel = 'WARNING'
 refLinksNotFoundURL = '/'
 
+relativeURLs = true
+canonifyURLs = true
+
 timeout = 60000
 
 rssLimit = 3
