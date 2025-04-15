@@ -1,20 +1,8 @@
 <div class="footer-links">
-    <a href="{{ absLangURL "https://sequoiafabrica.org/docs/about" }}">
-  {{ i18n "about"| default "About"}}
-</a>
-<a href="{{ .Site.Params.Wiki }}">
-  {{ i18n "power"| default "Wiki"}}
-</a>
-    <a href="{{ absLangURL "power" }}">
-  {{ i18n "power"| default "Power"}}
-</a>
-    <a href="{{ .Site.Params.Donate }}">
-  {{ i18n "donate"| default "Donate"}}
-</a>
-<a href="/privacy">
-  {{ i18n "privacy"| default "Privacy Policy"}}
-</a>
-<a href="{{ absLangURL "code-of-conduct" }}">
-  {{ i18n "team"| default "Code of Conduct"}}
-</a>
+    <a href="/about">About</a>
+    <a href="{{ .Site.Params.Wiki }}">Wiki</a>
+    <a href="/power">Power</a>
+    <a href="{{ .Site.Params.Donate }}">Donate</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/code-of-conduct">Code of Conduct</a>
 </div>

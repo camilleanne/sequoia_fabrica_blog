@@ -1,12 +1,11 @@
 <header class="site-header">
   <!-- <h1><a id="top" href="{{ absLangURL "/" }}">{{ site.Title }}</a></h1> -->
-  <a id="top" href='{{ absLangURL "/" }}'>
-    <img class="sf_logo" src="/icons/sf_logo_horizontal.svg" type="image/svg+xml" alt="{{ site.Title }}"></img>
+  <a id="top" href='/'>
+    <img class="sf_logo" src="/icons/sf_logo_horizontal_simplified.svg" type="image/svg+xml" alt="{{ site.Title }}"></img>
   </a>
-  <div class="subtitle">
-     <a href="{{ absLangURL "power" }}">{{i18n "sitesubtitle" | default .Site.Params.description}}      
-    </a>
-  </div>
+  <div class="subtitle">{{ .Site.Params.description }}</div>
+  <div class="subtitle"><a href='/power'>This is a solar powered website. It may go offline!</a></div>
+
   {{ partial "nav" . }}
  
 </header>

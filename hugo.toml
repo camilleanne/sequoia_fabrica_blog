@@ -49,7 +49,7 @@ enableInlineShortcodes = true
 [params]
   author = 'Camille Teicheira'
   newsletter = 'https://dashboard.mailerlite.com/forms/1197290/139047052633965606/share'
-  description = 'This is a solar-powered website, which means it sometimes goes offline'
+  description = 'A volunteer-run, membership-based, community workshop in San Francisco.'
   donate = 'https://opencollective.com/sequoia-fabrica'
   events = 'https://bookwhen.com/sequoiafabrica#focus=ev-s5jb-20250313160000'
   wiki = 'https://wiki.sequoiafabrica.org/wiki/Main_Page'
@@ -141,7 +141,6 @@ enableInlineShortcodes = true
   author = 'authors'
   tag = 'tags'
   category = 'categories'
-  translator = 'translators'
   lang = 'languages'
 
 [related]

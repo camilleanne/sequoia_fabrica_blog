@@ -770,11 +770,6 @@ p.summary {
   line-height: 1.2;
 }
 
-p.translators {
-  font-style: italic;
-  margin: 0.5rem 0;
-}
-
 blockquote {
   margin: var(--pad-large) auto;
   border: 1px solid var(--color-primary);
