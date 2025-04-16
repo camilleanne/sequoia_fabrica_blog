@@ -3,7 +3,6 @@ title: "Frequently Asked Questions"
 summary: "Frequently asked questions about Sequoia Fabrica Makerspace."
 slug: "faq"
 url: "faq"
-lang: "en"
 featured_image: ""
 ---
 

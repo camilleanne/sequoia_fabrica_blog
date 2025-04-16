@@ -1,7 +1,6 @@
 ---
 title: "About Sequoia Fabrica"
 summary: " "
-lang: "en"
 authors: [""]
 categories: [""]
 tags: [""]

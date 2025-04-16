@@ -2,7 +2,6 @@
 title: "Contact"
 summary: "Get in touch with Sequoia Fabrica Makerspace."
 slug: contact
-lang: "en"
 categories: [""]
 featured_image: ""
 url: "contact"

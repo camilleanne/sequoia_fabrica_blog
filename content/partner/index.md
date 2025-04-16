@@ -1,7 +1,6 @@
 ---
 title: "Partnerships"
 summary: "How to partner with Sequoia Fabrica"
-lang: "en"
 slug: "partner"
 url: "partner"
 featured_image: ""

@@ -123,12 +123,6 @@ function populateDashboard(data) {
     document.getElementById("stats").innerHTML = pushData(footer_data).join("");
 }
 
-// // language menu toggle
-// const langmenu = document.getElementById('lang-menu');
-// langmenu.addEventListener('click', function() {
-//     console.log('togglelanguages');
-//     document.getElementById('languages').classList.toggle("lang-expanded");
-// });
 
 //mobile menu toggle
 const mobilemenu = document.getElementById("m-btn");

@@ -1,7 +1,6 @@
 ---
 title: ""
 summary: "A volunteer-run, membership-based, community workshop in San Francisco. Classes and tools for woodworking, sewing, electronics, fabrication, crafts and fine arts."
-lang: "en"
 featured_image: "banner_1.jpg"
 layout: "index"
 url: "/"

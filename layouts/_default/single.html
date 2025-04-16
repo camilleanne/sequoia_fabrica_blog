@@ -75,7 +75,7 @@
 				{{ $allposts :=  where .Site.RegularPages "Type" "in" "posts" }}
 				{{ $notunlisted := where site.RegularPages ".Params.unlisted" "!=" "true" }} 
 				{{ $posts := $allposts | intersect $notunlisted }}
-		{{ $related :=  $posts.RelatedIndices . "tags" "lang"   | first 4}}
+		{{ $related :=  $posts.RelatedIndices . "tags"  | first 4}}
 		{{ range $related }}
 		{{ if isset .Params ("categories")  }}
 	
