@@ -24,8 +24,10 @@ function formatTime(date) {
 
 function renderEventContent(eventInfo) {
     let isDayGridMonth = eventInfo.view.type == "dayGridMonth";
+    // additional <a> tag is because of a bug in FullCalendar: see https://github.com/fullcalendar/fullcalendar/issues/6133
     let eventElement = `
             <div className="break-normal whitespace-normal">
+            ${isDayGridMonth ? "" : "<a href={eventInfo.event.url}></a>"}
                 <b>
                     ${formatTime(
                         eventInfo.event.start ? eventInfo.event.start : null
@@ -43,7 +45,6 @@ function renderEventContent(eventInfo) {
             </div>
         `;
 
-    // TODO: fix tooltip
     if (isDayGridMonth) {
         const uuid = self.crypto.randomUUID();
         const popoverId = `popover-${uuid}`;
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
             center: "title",
             right: "next",
         },
+        // TODO: switch to using /calendar.json once deployed
+        // will require js/parse_calendar.js to be run as a cron job on the server
         // events: '/calendar.json'
         events: {
             // TODO: templatize this
