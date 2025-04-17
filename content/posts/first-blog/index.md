@@ -3,7 +3,7 @@ title: "First Blog Post"
 date: "2025-03-10"
 summary: "look ma no hands"
 authors: ["Camille Teicheira"]
-categories: ["Low-tech Solutions"]
+categories: ["general"]
 tags: ["tag", "tag2"]
 translators: [""]
 featured_image: "image.png"

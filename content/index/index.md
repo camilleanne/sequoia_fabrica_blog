@@ -3,7 +3,8 @@ title: ""
 summary: "A volunteer-run, membership-based, community workshop in San Francisco. Classes and tools for woodworking, sewing, electronics, fabrication, crafts and fine arts."
 featured_image: "banner_1.jpg"
 layout: "index"
-url: "/"
+# url: "/"
+type: homepage # denotes that this is the homepage to the home.html layout
 categories: [""]
 ---
 
@@ -24,6 +25,10 @@ We are open to the public for events.
 
 Sign-up [for a class]({{< param events >}}), or [contact us](/contact).
 
+
+## Donations
+Please support makers of today and tomorrow with a [donation]({{< param donate >}})! We are a California Public Benefit Corporation and tax-exempt public charity under Section 501(c)(3). EIN: 93-4496044
+
 <--->
 
 ## Stay in Touch!
@@ -31,15 +36,15 @@ Sign-up [for a class]({{< param events >}}), or [contact us](/contact).
 ### Follow Us
 [Instagram]({{< param Instagram >}})  |  [Mastodon]({{< param Mastadon >}})  |  [TikTok]({{< param tiktok >}})
     
+## Code of Conduct
+Anyone involved in our space or events is expected to review and follow our [Code of Conduct](/code-of-contact).
 
 {{</ columns >}}
 
-<div id="calendar" className="col-span-2">
-    <Calendar urls={[getCalendar('bookwhen')]} />
+<div id="calendar-view" className="col-span-2">
+    <!-- <Calendar urls={[getCalendar('bookwhen')]} />
+    <iframe src="https://bookwhen.com/sequoiafabrica/iframe" frameborder="0" scrolling="yes" seamless="seamless" style="display:block;border:none;width:100%;height:900px;"></iframe> -->
+
 </div>
 
-## Donations
-Please support makers of today and tomorrow with a [donation]({{< param donate >}})! We are a California Public Benefit Corporation and tax-exempt public charity under Section 501(c)(3). EIN: 93-4496044
 
-## Code of Conduct
-Anyone involved in our space or events is expected to review and follow our [Code of Conduct](/code-of-contact).
