@@ -1246,10 +1246,20 @@ footer .weather_text {
 {{< columns >}}
 ------------*/
 
+.columns-wrapper {
+    max-width: var(--max-content-width); // Ensure it respects the max-width
+    margin: 0 auto; // Center the columns horizontally
+    padding: 0 var(--pad); // Add some padding for spacing
+}
+
 .columns {
-    margin: 2rem 8rem;
-    columns: 2 2rem;
+    columns: 2 auto;
   }
+
+.columns_content {
+    break-inside: avoid;
+    padding: 1px 0 0 0;
+}
 
 
 /*---------------
@@ -1339,6 +1349,34 @@ Global Responsive Styles
     }
 }
 
+
+// -- calendar view -- 
+.fc {
+    .fc-toolbar-title {
+        font-size: 1.5em;
+        width:auto;
+    }
+    margin: 1em;
+}
+
+.fc-toolbar.fc-header-toolbar {
+  margin-bottom: 1.5em;
+  width: var(--max-content-width);
+  align-self: center;
+}
+
+:root {
+  --background-start-rgb: 240, 240, 240;
+  --background-end-rgb: 255, 255, 255;
+
+  /* CSS For FullCalendar */
+  --fc-button-bg-color: #006951;
+  --fc-button-border-color: #006951;
+  --fc-button-hover-bg-color: #01a37e;
+  --fc-button-hover-border-color: #006951;
+  --fc-button-active-bg-color: #01a37e;
+  --fc-button-active-border-color: #006951;
+}
 
 
 @import "_print";

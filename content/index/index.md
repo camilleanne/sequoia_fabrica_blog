@@ -41,10 +41,9 @@ Anyone involved in our space or events is expected to review and follow our [Cod
 
 {{</ columns >}}
 
-<div id="calendar-view" className="col-span-2">
-    <!-- <Calendar urls={[getCalendar('bookwhen')]} />
-    <iframe src="https://bookwhen.com/sequoiafabrica/iframe" frameborder="0" scrolling="yes" seamless="seamless" style="display:block;border:none;width:100%;height:900px;"></iframe> -->
-
+## Upcoming events at Sequoia Fabrica:
+<div id="calendar">
+    <div id="calendar-view"></div>
 </div>
 
 
