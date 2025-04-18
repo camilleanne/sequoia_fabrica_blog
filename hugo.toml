@@ -68,9 +68,16 @@ repo = "camilleanne/sequoia_fabrica_blog"
 [[params.headless_cms.collections]]
 name = "blog"
 label = "Blog Posts"
+label_singular = "Blog Post"
 folder = "content/posts"
+slug = "{{slug}}/index"
 create = true
-slug = "{{year}}-{{month}}-{{day}}-{{slug}}"
+# this does not work the way decap or svetlia says:
+# decap: https://decapcms.org/docs/collection-folder/#media-and-public-folder
+# svetlia: https://github.com/sveltia/sveltia-cms?tab=readme-ov-file#using-a-custom-media-folder-for-a-collection
+# TODO: find the bug. kill the bug.
+media_folder = "./{{slug}}/images/"
+public_folder = "./{{slug}}/images/"
 
 [[params.headless_cms.collections.fields]]
 label = "Title"
@@ -102,16 +109,22 @@ widget = "list"
 label = "Tags"
 name = "tags"
 widget = "list"
+required = false
+# TODO: this doesn't work
+options = ["one", "two", "three", "four", "five"]
 
 [[params.headless_cms.collections.fields]]
 label = "Categories"
 name = "categories"
 widget = "list"
+default = ["general"]
+add_to_top = true
 
 [[params.headless_cms.collections.fields]]
 label = "Featured image"
 name = "featured_image"
 widget = "image"
+required = false
 
 [[params.headless_cms.collections.fields]]
 label = "Body"
@@ -124,14 +137,6 @@ fields = ["title", "published_date", "author"]
 [params.headless_cms.collections.sortable_fields.default]
 field = "published_date"
 direction = "descending"
-
-[params.headless_cms.collections.blog]
-create = true
-
-[[params.headless_cms.collections.blog.fields]]
-label = "Title"
-name = "title"
-widget = "string"
 
 [menu]
 
