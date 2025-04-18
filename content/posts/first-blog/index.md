@@ -2,13 +2,22 @@
 title: "First Blog Post"
 date: "2025-03-10"
 summary: "look ma no hands"
-authors: ["Camille Teicheira"]
-categories: ["general"]
-tags: ["tag", "tag2"]
-translators: [""]
-featured_image: "image.png"
 draft: false
+authors:
+  - Camille Teicheira
+  - Ryan Orban
+tags:
+  - tag
+  - tag2
+categories:
+  - general
+featured_image: you-got-it-boss.png
 ---
+
+
+{{% figure src="you-got-it-boss.png" %}} 
+bossman
+{{% /figure %}}
 
 ## About Sequoia Fabrica
 

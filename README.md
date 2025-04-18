@@ -1,6 +1,7 @@
 # Solar v.2
 
 - Rebuild of Low-tech Magazine's Solar theme with Hugo
+- Updated for the Sequioia Fabrica use (removed localization to reduce complexity)
 - Builds the entire site in minutes rather than hours :)
 - Makes use of additional taxonomies that are possible in Hugo
 
@@ -15,13 +16,12 @@ hugo server
 
 Content is organized as [Hugo Page Bundles](https://gohugo.io/content-management/page-bundles/).
 
-That means that each post is a directory which contains: 
+That means that each post is a directory (`content/posts`) which contains: 
 
 * the article (`index.md`)
-* the translations (`index.lang.md`)
 * the images in the article (`images/`)
 * dithered versions of the images (`images/dithers/`)
-* comments in various languages (`comments.en.md`) 
+* comments (`comments.md`) 
 
 Example:
 
@@ -29,31 +29,18 @@ Example:
 how-to-build-a-low-tech-internet/
 ├── comments.en.md
 ├── images
-│   ├── air-jaldi-epostman.png
 │   ├── dithers
-│   │   ├── air-jaldi-epostman_dithered.png
-│   │   ├── freifunk-wifi-node_dithered.png
-│   │   ├── node-air-jaldi-network_dithered.png
-│   │   ├── node-spanish-guifi-network_dithered.png
-│   │   ├── node-tegola_dithered.png
-│   │   ├── sneakernet-on-rails_dithered.png
-│   │   ├── tegola-project-low-tech-internet_dithered.png
-│   │   ├── wifi-link_dithered.png
-│   │   └── wireless-links-spanish-guifi-network_dithered.png
-│   ├── freifunk-wifi-node.jpg
-│   ├── node-air-jaldi-network.png
-│   ├── node-spanish-guifi-network.png
-│   ├── node-tegola.jpg
-│   ├── sneakernet-on-rails.jpg
-│   ├── tegola-project-low-tech-internet.png
-│   ├── wifi-link.jpg
-│   └── wireless-links-spanish-guifi-network.jpg
-├── index.de.md
-├── index.en.md
-├── index.es.md
-└── index.fr.md
+│   │   ├── img1_dithered.png
+│   │   ├── img2_dithered.png
+│   │   ├── img3_dithered.png
+│   │   └── img4_dithered.png
+│   ├── img1.png
+│   ├── img2.jpg
+│   ├── img3.png
+│   └── img4.jpg
+├── index.md
 ```
-At least one article is required: `index.md` or `index.lang.md`.
+At least one article is required: `index.md` or `index.md`.
 
 ## Formatting articles
 
@@ -61,50 +48,22 @@ The design relies on the following [front matter](https://gohugo.io/content-mana
 
 ```
 ---
-title: "How to Build a Low-tech Internet"
-date: "2015-10-26"
-summary: "If we want the internet to keep working in circumstances where access to energy is more limited, we can learn important lessons from alternative network technologies."
-slug: "how-to-build-a-low-tech-internet"
-lang: "en"
-authors: ["Kris De Decker"]
-categories: ["Low-tech Solutions"]
-tags: ["ICT"]
-featured_image: "tegola-project-low-tech-internet.png"
+title: First Blog Post
+date: 2025-03-10
+summary: look ma no hands
 draft: false
+authors:
+  - Canis Familiaris
+  - Felis Catus
+tags:
+  - tag
+  - tag2
+categories:
+  - general
+featured_image: you-got-it-boss.png
 ---
 ```
 
-In the case of a translation you can specify the translators as well:
-
-__!! Careful, only some metadata should to be translated, the other needs to be left intact.__
-
-Specifically, the metadata keys (`title`, `date`, `summary` etc.) should remain intact wheras the metadata values can be translated (such as the contents of `title` or `summary`).
-
-However do __not__ translate the values of `slug`, `categories`, `tags` and `featured_image`.
-
-```
----
-title: "Cómo construir una Internet de Baja Tecnología" #TO TRANSLATE
-date: "2015-10-26"
-summary: "Si queremos que internet siga funcionando en circunstancias en que el acceso a la energía es más limitado, entonces podemos aprender lecciones importantes de las tecnologías de red alternativas." #TO TRANSLATE
-slug: "how-to-build-a-low-tech-internet"
-lang: "es" #ADD THE CORRECT LANG code (fr, es, etc.)
-authors: ["Kris De Decker"]
-categories: ["Low-tech Solutions"]
-tags: ["ICT"] 
-featured_image: "tegola-project-low-tech-internet.png"
-translators: ["Colectivo Disonancia"] #ADD TRANSLATOR FOR THIS LANGUAGE
-draft: false
----
-```
-
-To add several authors or several tags, we use the following syntax: 
-
-```
----
-authors: ["Kris De Decker", "Marie Verdeil"]
-tags: ["ICT", "another tag", "another other tag"]
----
 ``` 
 ### Image shortcodes
 
@@ -115,7 +74,7 @@ The design relies on shortcodes for images rather than markdown image tags:
 
 
 ### Reader comments
-If there are any comments to be rendered under an article they should be in a file called `comments.lang.md` and each comment rendered as such:
+If there are any comments to be rendered under an article they should be in a file called `comments.md` and each comment rendered as such:
 ```
 {{< comment name="Lord Byron" >}}
 As the Liberty lads o'er the sea
@@ -127,9 +86,7 @@ And down with all kings but King Ludd”
 ```
 
 ### Internal links
-To link to other articles on the solar website, we use a hugo specific shortcode to call the article folder. This has several advantages: 
-1. The url will not break if the article `title` or `date` change, since we are calling the file itself. 
-2. When used in a transaltion, the shortcode automatically points to the translated article, if it exists, or defaults to english. 
+To link to other articles on the solar website, we use a hugo specific shortcode to call the article folder. This has an advantage as the url will not break if the article `title` or `date` change, since we are calling the file itself. 
 - _Sytnax:_
 ```go
 [Text]({{< ref "/path-to-folder" >}})
@@ -140,6 +97,8 @@ To link to other articles on the solar website, we use a hugo specific shortcode
 [here]({{< ref "/posts/power-water-networks/" >}})
 ```
 
+# TODO: update all content below this line:
+------------
 
 ## Author & Translator pages
 

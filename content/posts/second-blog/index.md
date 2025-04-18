@@ -5,9 +5,14 @@ summary: "it's alive!"
 authors: ["Camille Teicheira"]
 categories: ["Low-tech Solutions"]
 tags: ["tag", "tag2"]
-featured_image: "image.png"
+featured_image: "you-got-it-dude.png"
 draft: false
 ---
+
+
+{{% figure src="you-got-it-dude.png" %}} 
+bossman
+{{% /figure %}}
 
     in Just-
     spring when the world is mud-
