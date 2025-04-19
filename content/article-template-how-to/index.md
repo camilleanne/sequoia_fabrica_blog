@@ -24,10 +24,10 @@ A screenshot of the markdown file for this page.
   - [Comments file](#comments-file)
 - [Formatting articles](#formatting-articles)
 - [Syntax Rules](#syntax-rules)
-  - [**Main rules**](#main-rules)
+  - [Main rules](#main-rules)
 - [Big headers are h2](#big-headers-are-h2)
   - [Sub-header are h3](#sub-header-are-h3)
-  - [**Internal Links**](#internal-links)
+  - [Internal Links](#internal-links)
 - [Images shortcodes](#images-shortcodes)
 - [Comments](#comments)
 
@@ -48,7 +48,7 @@ That means that each post is a directory (`content/posts`) which contains:
 
 Example:
 
-```
+```text
 how-to-build-a-low-tech-internet/
 ├── comments.md
 ├── images
@@ -98,7 +98,7 @@ Regarding the syntax of the comments files see the [Comments section below](#rea
 
 The design relies on the following [front matter](https://gohugo.io/content-management/front-matter/) fields:
 
-```yaml
+```text
 ---
 title: First Blog Post
 date: 2025-03-10
@@ -123,19 +123,16 @@ featured_image: you-got-it-boss.png
   ```yaml
   date: "2015-10-26"
   ```
-
 * The correct spelling for categories is:
  `"Low-tech Solutions"` (Blue), `"High-tech Problems"` (Red),  `"Obsolete Technology"` (Green),  `"About"` or `" "` (BW)
   ```yaml
   categories: ["Low-tech Solutions"]
   ```
   // TODO: UPDATE THIS ^^
-
 * The featured image will appear as a thumbnail on the category page. Make sure the image is placed inside the `images/` folder. Do not include the file path, just the image with the correct extension (.png, .jpg).
   ```yaml
   featured_image: "image.png"
   ```
-
 * `draft: false` is the default. Setting this to `draft: true` will not generate the article. It will not be visible on the site anymore, only on gitlab.
   ```yaml
   draft: false
@@ -149,7 +146,6 @@ Other metadata fields are available:
   ```yaml
   slug: "this-is-a-slug"
   ```
-
 * `unlisted: true` : Include this field to mark the article as unlisted: it will still be accessible via the url but won't be listed in the index page.
   ```yaml
   unlisted: true
@@ -160,17 +156,14 @@ Other metadata fields are available:
 The rest of of the document uses [regular markdown syntax](https://www.markdownguide.org/cheat-sheet), with a few exception. Markup conventions as follows: 
 
 
-### **Main rules**
+### Main rules
 
 - `## Big headers are h2` and render as:
   ## Big headers are h2
-
 - `### Sub-header are h3` and render as:
   ### Sub-header are h3 
-
 - `> Quotes` render as:
   > Quotes
-
 - `* Lists` /  ` - Lists` render as this list.
 * _Footnote references_ use this syntax: `[^number]` and render as [^1]
 * _Footnotes_ appear the bottom of the document. The syntax is `[^1]: text`
@@ -180,7 +173,7 @@ The rest of of the document uses [regular markdown syntax](https://www.markdowng
 - `[Hyperlinks](url)` linking to other websites render as: [Hyperlinks](url)
 
 
-### **Internal Links**
+### Internal Links
 
 To link to other articles on the solar website, we use a hugo specific shortcode to call the article folder. This has an advantage as the url will not break if the article `title` or `date` change, since we are calling the file itself.
 
