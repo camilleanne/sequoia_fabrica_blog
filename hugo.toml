@@ -22,6 +22,8 @@ rssLimit = 3
 
 enableInlineShortcodes = true
 
+summaryLength=0
+
 [markup]
   [markup.goldmark.renderer]
     unsafe = true

@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-summary: "Frequently asked questions about Sequoia Fabrica Makerspace."
+summary: ""
 slug: "faq"
 url: "faq"
 featured_image: ""

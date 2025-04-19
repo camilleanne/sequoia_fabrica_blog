@@ -1,6 +1,6 @@
 ---
 title: "Membership at Sequoia Fabrica"
-summary: " "
+summary: ""
 featured_image: ""
 slug: "membership"
 url: "membership"
