@@ -16,11 +16,10 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ .Site.Title }} {{.Site.Language.LanguageName}}</title>
+    <title>{{ .Site.Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>{{i18n "sitesubtitle" | default .Site.Params.description}}</description>
-    <generator>Hugo {{hugo.Version}}</generator>{{ with .Site.Language.Lang }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
+    <description>{{ .Site.Params.description}}</description>
+    <generator>Hugo {{hugo.Version}}</generator>{{ with .Site.Author.email }}
     <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
     <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
     <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}

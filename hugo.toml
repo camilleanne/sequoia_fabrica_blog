@@ -1,6 +1,6 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'LOW←TECH MAGAZINE'
+title = 'Sequoia Fabrica Makerspace'
 
 buildFuture = true
 buildDrafts = false
@@ -13,11 +13,16 @@ pluralizelisttitles = 'false'
 refLinksErrorLevel = 'WARNING'
 refLinksNotFoundURL = '/'
 
+relativeURLs = true
+canonifyURLs = true
+
 timeout = 60000
 
 rssLimit = 3
 
 enableInlineShortcodes = true
+
+summaryLength=0
 
 [markup]
   [markup.goldmark.renderer]
@@ -44,94 +49,64 @@ enableInlineShortcodes = true
   categories = '/:slug/'
 
 [params]
-  author = 'Kris De Decker'
-  newsletter = 'https://d69baa34.sibforms.com/serve/MUIEAJWIw9w82Dl4ua6FQArPaI-3Qb-zVTwPNabHQgFH51MiGF69Smy9LOC_HPoUmBj0emaXsXT87gcQXDPvtu-AZsJCHWhkkv21CdrcQu4GdnYAhZ-MrIPhwGDecagLzYxqfvkaqXg2ODcbJU4ByoDmzJK3ZTczDo2jcWtfn-En0MGKLVkgxx9TgdHqYoPabMJCMF-agLEclEwv'
-  description = 'This is a solar-powered website, which means it sometimes goes offline'
+  author = 'Camille Teicheira'
+  newsletter = 'https://dashboard.mailerlite.com/forms/1197290/139047052633965606/share'
+  description = 'A volunteer-run, membership-based, community workshop in San Francisco.'
+  donate = 'https://opencollective.com/sequoia-fabrica'
+  events = 'https://bookwhen.com/sequoiafabrica#focus=ev-s5jb-20250313160000'
+  wiki = 'https://wiki.sequoiafabrica.org/wiki/Main_Page'
+  email = 'info@sequoiafabrica.org'
+  mastadon = 'https://sfba.social/@sequoiafabrica'
+  instagram = 'https://www.instagram.com/sequoia.fabrica'
+  tiktok = 'https://www.tiktok.com/@sequoiafabrica'
 
 [menu]
   [[menu.main]]
     identifier = 'about'
     name = 'About'
-    url = '/about/'
+    url = '/about'
     weight = 1
   [[menu.main]]
-    identifier = 'lowtechtitle'
-    name = 'Low-tech Solutions'
-    url = '/low-tech-solutions/'
+    identifier = 'events'
+    name = 'Events'
+    url = 'https://bookwhen.com/sequoiafabrica'
     weight = 2
-  [[menu.main]]
-    identifier = 'hightechtitle'
-    name = 'High-tech Problems'
-    url = '/high-tech-problems/'
-    weight = 3
-  [[menu.main]]
-    identifier = 'obsoletetitle'
-    name = 'Obsolete Technology'
-    url = '/obsolete-technology/'
-    weight = 4
-  [[menu.main]]
-    identifier = 'offline'
-    name = 'Offline Reading'
-    url = '/offline-reading/'
-    weight = 5
-  [[menu.main]]
-    identifier = 'archives'
-    name = 'Archive'
-    url = '/archives/'
-    weight = 6
   [[menu.main]]
     identifier = 'donate'
     name = 'Donate'
-    url = '/donate/'
+    url = 'https://opencollective.com/sequoia-fabrica'
+    weight = 3
+  [[menu.main]]
+    identifier = 'membership'
+    name = 'Membership'
+    url = '/membership'
+    weight = 4
+  [[menu.main]]
+    identifier = 'faq'
+    name = 'FAQ'
+    url = '/faq'
+    weight = 5
+  [[menu.main]]
+    identifier = 'partner'
+    name = 'Partner'
+    url = '/partner'
+    weight = 6
+  [[menu.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    url = '/contact'
     weight = 7
   [[menu.main]]
-    identifier = 'ntm'
-    name = 'NTM'
-    url = 'https://www.notechmagazine.com/'
+    identifier = 'blog'
+    name = 'Blog'
+    url = '/posts'
     weight = 8
 
-[languages]
-  [languages.en]
-    languageName = 'English'
-    weight = 1
-  [languages.fr]
-    languageName = 'Français'
-    weight = 2
-  [languages.de]
-    languageName = 'Deutsch'
-    weight = 3
-  [languages.nl]
-    languageName = 'Nederlands'
-    weight = 4
-  [languages.es]
-    languageName = 'Español'
-    weight = 5
-  [languages.it]
-    languageName = 'Italiano'
-    weight = 6
-  [languages.pt]
-    languageName = 'Português'
-    weight = 7
-  [languages.pl]
-    languageName = 'Polski'
-    weight = 8
-  [languages.ar]
-    languageName = 'العربية'
-    languagedirection = 'rtl'
-    weight = 9
-  [languages.vn]
-    languageName = 'Tiếng Việt'
-    weight = 10
-  [languages.ko]
-    languageName = '한국어'
-    weight = 11
 
 [taxonomies]
   author = 'authors'
   tag = 'tags'
   category = 'categories'
-  translator = 'translators'
-  lang = 'languages'
 
 [related]
   includeNewer = true
@@ -140,6 +115,4 @@ enableInlineShortcodes = true
   [[related.indices]]
     name = 'tags'
     weight = 100
-  [[related.indices]]
-    name = 'lang'
-    weight = 80
+

@@ -13,7 +13,8 @@
   --color-primary: black;
   --color-sky: #f0f8ff;
   --color-sub: rgb(130 130 130);
-  --color-bg: #fff5d1;
+  --color-bg: #1cd216;
+  /* --color-bg: rgb(195 249 195); */
   --color-low: #162dab;
   --color-high: #d11305;
   --color-obs: #006951;
@@ -29,7 +30,7 @@
   --font-body: 1rem;
   --font-small: 0.7rem;
   --max-img-width: 1040px;
-  --max-content-width: 33rem;
+  --max-content-width: 45rem;
   --content-width: 80%;
 }
 @media only screen and (max-width: 980px) {
@@ -767,11 +768,6 @@ p.summary {
   font-size: 1.5rem;
   text-indent: 0;
   line-height: 1.2;
-}
-
-p.translators {
-  font-style: italic;
-  margin: 0.5rem 0;
 }
 
 blockquote {
