@@ -14,8 +14,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'  # Change to a specific version if needed
-          extended: true          # Use extended version for SCSS/asset pipeline
+          hugo-version: "latest"
+          extended: true # Use extended version for SCSS/asset pipeline
 
       - name: Build the site
         run: hugo --minify
