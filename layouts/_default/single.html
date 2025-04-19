@@ -35,7 +35,7 @@
 			{{ end }}
 		</section>
 
-		{{ $commentsfile := printf "comments.%s.md" .Lang }}
+		{{ $commentsfile := printf "comments.md" }}
 		{{ with .Resources.GetMatch $commentsfile }}
 		<!-- TODO: better way to do comments -->
 		<section class="comments" id="comments">
