@@ -19,7 +19,7 @@ There is a handy guide!
 - raw markdown at [content/article-template-how-to/index.md](./content/article-template-how-to/index.md)
 
 
-## Author & Translator pages
+## Author
 
 This site builds custom taxonomy for `Authors` which can be accessed via `http://localhost:1313/authors/`. Individual data about each author can be written in `content/authors/authorname/index.md`
 
