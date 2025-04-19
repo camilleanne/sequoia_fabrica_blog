@@ -16,7 +16,7 @@ featured_image: you-got-it-boss.png
 
 {{% figure src="you-got-it-boss.png" %}} 
 bossman
-{{% /figure %}}
+{{% /figure %
 
 ## About Sequoia Fabrica
 
