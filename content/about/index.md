@@ -1,6 +1,6 @@
 ---
 title: "About Sequoia Fabrica"
-summary: " "
+summary: ""
 authors: [""]
 categories: [""]
 tags: [""]

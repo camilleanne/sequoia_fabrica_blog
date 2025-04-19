@@ -5,12 +5,10 @@
 	<article>
 		<section id="content" class="article">
 			<header class="entry-header">
-				<h1 class="entry-title">
-				{{ .Title }}</h1>
+				<h1 class="entry-title">{{ .Title }}</h1>
 
-				<p class="summary">
-					{{ .Summary }}
-				</p>
+				<p class="summary">{{ .Summary }}</p>
+
 				<div class="metadata">
 					{{/*  disable metadata author for about category  */}}
 					{{ if not (in .Params.categories "About") }}
@@ -23,7 +21,6 @@
 							</div>
 						{{ end }}
 					{{ end }}
-
 				</div>
 			</header>
 
@@ -38,7 +35,7 @@
 			{{ end }}
 		</section>
 
-		{{ $commentsfile := printf "comments.%s.md" .Lang }}
+		{{ $commentsfile := printf "comments.md" }}
 		{{ with .Resources.GetMatch $commentsfile }}
 		<!-- TODO: better way to do comments -->
 		<section class="comments" id="comments">

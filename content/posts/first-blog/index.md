@@ -11,8 +11,13 @@ tags:
   - tag2
 categories:
   - general
-featured_image: image.png
+featured_image: you-got-it-boss.png
 ---
+
+{{% figure src="you-got-it-boss.png" %}} 
+bossman
+{{% /figure %}}
+
 ## About Sequoia Fabrica
 
 Welcome to Sequoia Fabrica, a 501(c)(3) non-profit, community workshop and makerspace in San Francisco.

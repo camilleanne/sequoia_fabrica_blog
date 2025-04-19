@@ -1,6 +1,6 @@
 ---
 title: "Code of Conduct"
-summary: "Sequoia Fabrica's Code Of Conduct"
+summary: ""
 categories: [""]
 featured_image: ""
 url: "code-of-conduct"
