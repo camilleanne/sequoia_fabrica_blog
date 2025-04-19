@@ -125,16 +125,16 @@ featured_image: you-got-it-boss.png
   ```
 * The correct spelling for categories is:
  `"Low-tech Solutions"` (Blue), `"High-tech Problems"` (Red),  `"Obsolete Technology"` (Green),  `"About"` or `" "` (BW)
-  ```yaml
+  ```text
   categories: ["Low-tech Solutions"]
   ```
   // TODO: UPDATE THIS ^^
 * The featured image will appear as a thumbnail on the category page. Make sure the image is placed inside the `images/` folder. Do not include the file path, just the image with the correct extension (.png, .jpg).
-  ```yaml
+  ```text
   featured_image: "image.png"
   ```
 * `draft: false` is the default. Setting this to `draft: true` will not generate the article. It will not be visible on the site anymore, only on gitlab.
-  ```yaml
+  ```text
   draft: false
   ```
 
@@ -143,11 +143,11 @@ _**Always include at least:**_ `title: "", date: "", summary: "Article Summary"`
 Other metadata fields are available: 
 
 * `slug: ""` : By default, the slug is the filename but you can overwrite this by adding a slug.
-  ```yaml
+  ```text
   slug: "this-is-a-slug"
   ```
 * `unlisted: true` : Include this field to mark the article as unlisted: it will still be accessible via the url but won't be listed in the index page.
-  ```yaml
+  ```text
   unlisted: true
   ```
 
@@ -178,21 +178,21 @@ The rest of of the document uses [regular markdown syntax](https://www.markdowng
 To link to other articles on the solar website, we use a hugo specific shortcode to call the article folder. This has an advantage as the url will not break if the article `title` or `date` change, since we are calling the file itself.
 
 - _Shortcode is written as follow and looks like this:_ [Text](/).
-  ```go
+  ```text
   [Text]({{</* ref "/path-to-folder" */>}})
   ``` 
 
 The file path should start from within the content folder and link to the article or page folder, not the slug!
 
 - _Examples:_
-  ```go
+  ```text
   [Donate]({{</* ref "/donate" */>}})
   [here]({{</* ref "/posts/power-water-networks/" */>}})
   ```
 
 
 * _To link to a section in the article_ (render as: [Link to section](#section).)
-  ```go
+  ```text
   [Link to Section](#section)
 
   ### Section
@@ -203,7 +203,7 @@ The file path should start from within the content folder and link to the articl
 Images now use specific shortcodes instead of the classic markdown syntax. This allows t include a toggle linking to the original images and to embed the caption within the image and better control its styling. 
 
 The shortcode is written: 
-``` go
+```text
 {{%/* figure src="image-1.png" %}} 
 Here goes the image caption. 
 You can include footnotes [^1], 
@@ -237,7 +237,7 @@ The file should start with the following lines:
 ```
 
 Each comment is then added: 
-```go
+```text
 {{</* comment name="Name" >}}
 
 This is the comment text.
