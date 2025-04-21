@@ -2,12 +2,15 @@
 # © 2023 Roel Roscam Abbing, released as AGPLv3
 # see https://www.gnu.org/licenses/agpl-3.0.html
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate/
+# Updated 2025 by Camille Teicheira
 
 now=`date`
-baseURL="" #the URL of the website e.g. htttps://solar.lowtechmagazine.com/
-contentDir="" #the directory where your HUGO articles are e.g. /path/to/repo/solar_v2/content/
-repoDir="" #the full path to the repository
-outputDir="" # the directory where you export the site to.
+# baseURL="https://sequoiafabrica.org" #the URL of the website e.g. htttps://solar.lowtechmagazine.com/
+baseURL="http://localhost:9000"
+contentDir="$(pwd)/content" #the directory where your HUGO articles are e.g. /path/to/repo/solar_v2/content/
+repoDir="$(pwd)" #the full path to the repository
+outputDir="$(pwd)/output" # the directory where you export the site to.
+# python="/usr/bin/python3"
 
 
 while getopts f flag
@@ -28,24 +31,28 @@ then
         echo "Git up to date $now"
 else
         echo "Git was not up to date"
+fi
+        mkdir -p $outputDir
+
         echo $updated
         echo "Rebuilding the site"
 
         cd $repoDir
 
         echo "Dithering new images"
-        /usr/bin/python3 utils/dither_images.py -d $contentDir --colorize
+        # TODO: colorize requires updates to "categories" (still configured for lowtech mag)
+        python3 utils/dither_images.py -d $contentDir # --colorize
 
         echo "Generating site"
         hugo -b $baseURL --destination $outputDir
 
         echo "Calculating page sizes"
-        /usr/bin/python3 utils/calculate_size.py --directory $outputDir --baseURL $baseURL
+        python3 utils/calculate_size.py --directory $outputDir --baseURL $baseURL
 
         echo "Removing original media from" $outputDir
-        /usr/bin/python3 utils/clean_output.py --directory $outputDir
+        python3 utils/clean_output.py --directory $outputDir
 
         after=`date`
         echo "Site regeneration started $now"
         echo "Site regeneration finished $after"
-fi
+# fi
