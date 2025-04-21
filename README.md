@@ -30,15 +30,19 @@ This site builds custom taxonomy for `Authors` which can be accessed via `http:/
 
 In `utils` there are various utilities to be used before or after site rendering. 
 
+### Installation & Depedencies
+
+depends on 
+* [Pillow](https://pillow.readthedocs.io) (for `dither_images.py`)
+* [hitherdither](https://github.com/hbldh/hitherdither) (for `dither_images.py`)
+* [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) (for `calculate_size.py`)
+* [lxml](https://lxml.de/) (for `calculate_size.py`)
+
+`pip install -r utils/requirements.txt`
+
 ## dithering tool
 
 `dither_images.py` recursively traverses folders and creates dithered versions of the images it finds. These are stored in the same folder as the images in a folder called "dithers".
-
-### Installation & Depedencies
-
-depends on [Pillow](https://pillow.readthedocs.io) and [hitherdither](https://github.com/hbldh/hitherdither)
-
-`pip install Pillow git+https://www.github.com/hbldh/hitherdither`
 
 ### Usage
 
@@ -58,13 +62,6 @@ Remove all dithered files in the subdirectories of `content`:
 
 This script recursively traverses folders and enumerates the file size of all html pages and associated media.
 The calculated total file size is then added to the HTML page. The script looks for a `div` with class `page-size` to add the page metadata in to. This div is currently found in `layouts/partials/footer.html`
-
-#### Installation & Dependencies
-
-Relies on BeautifulSoup
-
-`pip install bs4`
-
 
 #### Usage
 
