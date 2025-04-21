@@ -1,5 +1,6 @@
 # Page Metadata
 # © 2022 Roel Roscam Abbing, released as AGPLv3
+# updated 2025 by Camille Teicheira for Sequoia Fabrica
 # see https://www.gnu.org/licenses/agpl-3.0.html
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate.html
 

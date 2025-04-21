@@ -44,7 +44,7 @@ fi
         python3 utils/dither_images.py -d $contentDir # --colorize
 
         echo "Generating site"
-        hugo -b $baseURL --destination $outputDir
+        hugo --baseURL $baseURL --destination $outputDir --ignoreCache --environment production
 
         echo "Calculating page sizes"
         python3 utils/calculate_size.py --directory $outputDir --baseURL $baseURL
@@ -52,7 +52,6 @@ fi
         echo "Removing original media from" $outputDir
         python3 utils/clean_output.py --directory $outputDir
 
-        after=`date`
-        echo "Site regeneration started $now"
-        echo "Site regeneration finished $after"
-# fi
+        after_seconds=`date +%s`
+        time_elapsed=$(( $after_seconds - $now_seconds ))
+        echo "Site regeneration took $time_elapsed seconds"
