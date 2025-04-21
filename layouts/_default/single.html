@@ -70,7 +70,7 @@
 				</div>
 				<div class="grid">
 					{{ $allposts :=  where .Site.RegularPages "Type" "in" "posts" }}
-					{{ $notunlisted := where site.RegularPages ".Params.unlisted" "!=" "true" }} 
+					{{ $notunlisted := where site.RegularPages ".Params.unlisted" "!=" "true" }}
 					{{ $posts := $allposts | intersect $notunlisted }}
 					{{ $related :=  $posts.RelatedIndices . "tags"  | first 4}}
 					{{ range $related }}
