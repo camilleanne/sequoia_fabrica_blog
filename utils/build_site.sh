@@ -9,7 +9,7 @@ set -e;
 baseURL="//localhost:9000" #the URL of the website e.g. https://solar.lowtechmagazine.com/
 repoDir="$(pwd)"
 contentDir="$repoDir/content"
-outputDir="$(pwd)/output"
+outputDir="$(pwd)/built-site"
 
 # Parse named arguments
 while [[ "$#" -gt 0 ]]; do

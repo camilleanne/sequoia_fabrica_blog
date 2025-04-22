@@ -1,9 +1,10 @@
 name: Build and deploy site
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
+on: [push] # on all pushes for testing
 
 jobs:
   build:
@@ -26,7 +27,14 @@ jobs:
         run: pip install -r utils/requirements.txt
 
       - name: Build the site
-        run: ./utils/build.sh --baseURL "https://sequoiafabrica.org"
+        run: ./utils/build.sh --baseURL "https://sequoiafabrica.org" --outputDir "./built-site"
+
+      - name: Check for build success
+        run: |
+          if [ ! -d "built-site" ]; then
+            echo "Build failed: 'built-site' directory not found"
+            exit 1
+          fi
 
       # - name: SSH to server and rsync files
       #   run: TODO
