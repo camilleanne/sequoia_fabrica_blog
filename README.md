@@ -78,6 +78,18 @@ It can be used in `cron` to make a daily build at 12:15 and log the output.
 
 `15 12 * * * /bin/bash /path/to/repo/utils/build_site.sh > /path/to/build.log 2>&1`
 
+```bash
+❯ ./utils/build_site.sh --help
+Usage: build_site.sh [options]
+
+Options:
+  --baseURL=<url>       Set the base URL of the website (default: //localhost:9000)
+  --repoDir=<path>      Set the repository directory (default: current working directory)
+  --contentDir=<path>   Set the content directory (default: <repoDir>/content)
+  --outputDir=<path>    Set the output directory (default: <current working directory>/built-site)
+  --help                Display this help message
+```
+
 # Contributions
 
 Updates for Sequioa Fabrica made by

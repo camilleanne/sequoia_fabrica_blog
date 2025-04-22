@@ -23,6 +23,16 @@ while [[ "$#" -gt 0 ]]; do
         if [[ "$1" == *=* ]]; then contentDir="${1#*=}"; else shift; contentDir="$1"; fi;;
         --outputDir*|--outputDir)
         if [[ "$1" == *=* ]]; then outputDir="${1#*=}"; else shift; outputDir="$1"; fi;;
+        --help*|--help)
+            echo "Usage: $(basename "$0") [options]"
+            echo ""
+            echo "Options:"
+            echo "  --baseURL=<url>       Set the base URL of the website (default: //localhost:9000)"
+            echo "  --repoDir=<path>      Set the repository directory (default: current working directory)"
+            echo "  --contentDir=<path>   Set the content directory (default: <repoDir>/content)"
+            echo "  --outputDir=<path>    Set the output directory (default: <current working directory>/built-site)"
+            echo "  --help                Display this help message"
+        exit 0;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
