@@ -1,10 +1,10 @@
 name: Build and deploy site
 
-# on:
-#   push:
-#     branches:
-#       - main
-on: [push] # on all pushes for testing
+on:
+  push:
+    branches:
+      - main
+# on: [push] # on all pushes for testing
 
 jobs:
   build:
