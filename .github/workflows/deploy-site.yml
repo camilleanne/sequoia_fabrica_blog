@@ -1,0 +1,44 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches:
+      - main
+# on: [push] # on all pushes for testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.145.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python Dependencies
+        run: pip install -r utils/requirements.txt
+
+      - name: Build the site
+        # TODO: make --baseURL dynamic (a github env var?)
+        run: ./utils/build_site.sh --baseURL "https://sequoiafabrica.org" --outputDir "./built-site"
+
+      - name: Check for build success
+        run: |
+          if [ ! -d "built-site" ]; then
+            echo "Build failed: 'built-site' directory not found"
+            exit 1
+          fi
+
+      # - name: SSH to server and rsync files
+      #   run: TODO

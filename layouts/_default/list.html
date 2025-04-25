@@ -9,8 +9,7 @@
         {{ if (eq .Data.Singular "author")}} {{ i18n "written_by" | default "Written by"}} {{ else if (eq .Data.Singular "translator")}} {{ i18n "translated_by" | default "Translated by"}} {{ else if (eq .Data.Singular "tag")}} {{ i18n "theme" | default "Theme"}}{{ end }}
         <h1 class="entry-title">{{ $categoryTitle | default .Title }}</h1>
         {{ if not (eq $categoryDescription ' ') }}
-        <p class="summary">{{$categoryDescription}}
-        </p>
+        <p class="summary">{{$categoryDescription}}</p>
         {{ end }}
     </header>
     <section id="list" class="grid">

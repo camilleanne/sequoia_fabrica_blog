@@ -1,14 +1,11 @@
 {{ define "main" }}
 
 <main class='article {{ range .Params.categories }} {{ . | urlize }} {{ end }}'>
-
 	<article>
 		<section id="content" class="article">
 			<header class="entry-header">
 				<h1 class="entry-title">{{ .Title }}</h1>
-
 				<p class="summary">{{ .Summary }}</p>
-
 				<div class="metadata">
 					{{/*  disable metadata author for about category  */}}
 					{{ if not (in .Params.categories "About") }}
@@ -27,63 +24,64 @@
 			<div class="entry-content">
 				{{- $contents := split .Content `<div class="footnotes" role="doc-endnotes">` -}}
 				{{ index $contents 0 | safeHTML }}
+				</div>
 			</div>
 			{{ if not (in .Params.categories "About")  }}
-			{{ if not (in .Params.categories "") }}
-			{{ partial "post-footer" . }}
-			{{ end }}
+				{{ if not (in .Params.categories "") }}
+					{{ partial "post-footer" . }}
+				{{ end }}
 			{{ end }}
 		</section>
 
 		{{ $commentsfile := printf "comments.md" }}
 		{{ with .Resources.GetMatch $commentsfile }}
-		<!-- TODO: better way to do comments -->
-		<section class="comments" id="comments">
-			<h2 id="comments-title">Comments</h2>
-			<p><em>To make a comment, please send an e-mail to info (at) sequoiafabrica (dot) com. Your e-mail address is not used for other purposes, and will be deleted after the comment is published. If you don’t want your real name to be published, sign the e-mail with the name you want to appear.</em></p>
-			<details>
-				<summary><span id="comment-count"></span>Reactions</summary>
-				<div id="comments-list">
-					{{ .Content }}
-				</div>
-			</details>			
-		</section>
+			<!-- TODO: better way to do comments -->
+			<section class="comments" id="comments">
+				<h2 id="comments-title">Comments</h2>
+				<p>
+					<em>To make a comment, please send an e-mail to info (at) sequoiafabrica (dot) com.
+					Your e-mail address is not used for other purposes, and will be deleted after the comment is published.
+					If you don’t want your real name to be published, sign the e-mail with the name you want to appear.</em>
+				</p>
+				<details>
+					<summary><span id="comment-count"></span>Reactions</summary>
+					<div id="comments-list">
+						{{ .Content }}
+					</div>
+				</details>
+			</section>
 		{{ end }}
 
 		<section id="reference">
 			<div class="footnotes" role="doc-endnotes">
 			{{ index $contents 1 | safeHTML }}
+			</div>
 		</section>
-
 
 		{{$tags := (.GetTerms "tags")}}
 		{{ if $tags }}
-		
-		<section id="related" class="article-list">
-		    <h3 class="related">Related Articles</h3>
-		    <div class="post-info gray">
-		    <p class="tags">Themes:
-		        {{ range $tags }}
-		            <a href="{{ .Permalink }}" class="tag">{{ .LinkTitle }}</a>
-		        {{ end }}
-		    </p>
-		    </div>
-		    <div class="grid">
-				{{ $allposts :=  where .Site.RegularPages "Type" "in" "posts" }}
-				{{ $notunlisted := where site.RegularPages ".Params.unlisted" "!=" "true" }} 
-				{{ $posts := $allposts | intersect $notunlisted }}
-		{{ $related :=  $posts.RelatedIndices . "tags"  | first 4}}
-		{{ range $related }}
-		{{ if isset .Params ("categories")  }}
-	
-		{{ partial "article-list/default" . }}
-	
+			<section id="related" class="article-list">
+				<h3 class="related">Related Articles</h3>
+				<div class="post-info gray">
+				<p class="tags">Themes:
+					{{ range $tags }}
+						<a href="{{ .Permalink }}" class="tag">{{ .LinkTitle }}</a>
+					{{ end }}
+				</p>
+				</div>
+				<div class="grid">
+					{{ $allposts :=  where .Site.RegularPages "Type" "in" "posts" }}
+					{{ $notunlisted := where site.RegularPages ".Params.unlisted" "!=" "true" }}
+					{{ $posts := $allposts | intersect $notunlisted }}
+					{{ $related :=  $posts.RelatedIndices . "tags"  | first 4}}
+					{{ range $related }}
+						{{ if isset .Params ("categories")  }}
+							{{ partial "article-list/default" . }}
+						{{ end }}
+					{{ end }}
+				</div>
+			</section>
 		{{ end }}
-		{{ end }}
-		    </div>
-		</section>
-		{{ end }}
-		
 	</article>
 </main>
 {{ end }}

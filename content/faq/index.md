@@ -6,6 +6,23 @@ url: "faq"
 featured_image: ""
 ---
 
+- [Where are you located?](#where-are-you-located)
+- [How can I access the space?](#how-can-i-access-the-space)
+- [What tools do you have?](#what-tools-do-you-have)
+- [Can I have a tour?](#can-i-have-a-tour)
+- [When will you have a class on _{some topic}_?](#when-will-you-have-a-class-on-some-topic)
+- [How does membership work?](#how-does-membership-work)
+- [How much does membership cost?](#how-much-does-membership-cost)
+- [Can I bring my kids?](#can-i-bring-my-kids)
+- [Can I bring my pet?](#can-i-bring-my-pet)
+- [Can I take a class at Sequoia Fabrica if I can't afford a workshop fee?](#can-i-take-a-class-at-sequoia-fabrica-if-i-cant-afford-a-workshop-fee)
+- [**Are you a non-profit? 501(c)(3)?**](#are-you-a-non-profit-501c3)
+- [Do you accept in kind donations?](#do-you-accept-in-kind-donations)
+- [Why did you start another space?](#why-did-you-start-another-space)
+- [Why did you choose the name Sequoia Fabrica?](#why-did-you-choose-the-name-sequoia-fabrica)
+- [What is a Grove?](#what-is-a-grove)
+
+
 ## Where are you located?
 
 Sequoia Fabrica is located at 1736 18th Street in San Francisco’s Potrero Hill neighborhood. 

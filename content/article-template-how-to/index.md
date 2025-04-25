@@ -2,7 +2,6 @@
 title: "Article Template: How to write posts in Markdown for Hugo?"
 date: ""
 summary: "This page goes over the specific markdown syntax that should be used to write articles, and comments in the new hugo solar web. "
-lang: "en"
 authors: ["Marie Verdeil"]
 categories: [""]
 tags: [""]

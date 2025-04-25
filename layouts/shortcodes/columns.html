@@ -1,5 +1,7 @@
-{{- $size := default "regular" (.Get "size" | lower) }} {{- if not (in (slice
-"regular" "large" "small") $size) }} {{- $size = "regular" }} {{- end }}
+{{- $size := default "regular" (.Get "size" | lower) }}
+{{- if not (in (slice "regular" "large" "small") $size) }}
+    {{- $size = "regular" }}
+{{- end }}
 
 <div class="columns-wrapper">
     <div class="columns columns-{{ $size }}">

@@ -1,0 +1,4 @@
+beautifulsoup4==4.13.4 
+Pillow==11.2.1
+git+https://www.github.com/hbldh/hitherdither
+lxml==5.3.2
