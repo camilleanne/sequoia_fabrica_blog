@@ -19,13 +19,20 @@ There is a handy guide!
 - raw markdown at [content/article-template-how-to/index.md](./content/article-template-how-to/index.md)
 
 
-## Author & Translator pages
+## Authors
 
 This site builds custom taxonomy for `Authors` which can be accessed via `http://localhost:1313/authors/`. Individual data about each author can be written in `content/authors/authorname/index.md`
 
 
-# TODO: update all content below this line:
-------------
+# Deploys and Github Actions
+
+Deploys will/do happen when PRs are merged to main.
+
+There are currently 3 Github actions that run:
+1. `Test build hugo site` - runs on every commit -- makes sure that the site builds and that no errors have been introduced
+2. _IN DEVELOPMENT_ `Build and deploy site` -- will be the action that will build the site and deploy it to the main domain. Currently doesn't do any deploy because we still need to get a permanent ip address for the board (in other words, install the solar and power system).
+3. _IN DEVELOPMENT_ `Deploy Hugo site to Pages` -- is a temporary task that builds the site for github pages as a sort of preview/eval site. Will be replaced by action 2.
+
 # Additional utilities
 
 In `utils` there are various utilities to be used before or after site rendering. 

@@ -6,7 +6,8 @@ jobs:
   build:
     name: Build Hugo Site
     runs-on: ubuntu-latest
-
+    env:
+      HUGO_VERSION: 0.145.0
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
