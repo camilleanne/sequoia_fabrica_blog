@@ -1,17 +1,20 @@
 # [Solar v.2](https://github.com/lowtechmag/solar_v2) for Sequioa Fabrica
 
 - Rebuild of [Low-tech Magazine's Solar theme with Hugo](https://github.com/lowtechmag/solar_v2)
-- Updated for the Sequioia Fabrica usecase
+- Updated for the Sequioa Fabrica usecase:
   - removed localization to reduce complexity
   - blog is now just a component of website, instead of main focus
   - added an events calendar
   - update to build scripts to be more generalized
   - builds + deploys static site with github actions
 
-Requires [Hugo 0.145](https://gohugo.io/) or newer! ([installation instructions](https://gohugo.io/installation/))
+Requires [Hugo 0.145](https://gohugo.io/) or newer!
 
 ## Local Development
-```
+Install Hugo: https://gohugo.io/installation/
+
+```bash
+# run local server -- will rebuild on local code change
 hugo server
 ```
 
