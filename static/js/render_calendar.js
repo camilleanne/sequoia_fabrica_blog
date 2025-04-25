@@ -71,13 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
             center: "title",
             right: "next",
         },
-        // TODO: switch to using /calendar.json once deployed
-        // will require js/parse_calendar.js to be run as a cron job on the server
-        // events: '/calendar.json'
+        // // TODO: switch to using /calendar.json once deployed
+        // // will require js/parse_calendar.js to be run as a cron job on the server
+        // events: '/calendar.json',
         events: {
             // TODO: templatize this
-            // TODO: replace cors anywhere:
-            url: "https://cors-anywhere.herokuapp.com/https://feeds.bookwhen.com/ical/x3ixm04f5wj7/yf23z4/public.ics",
+            url: "https://feeds.bookwhen.com/ical/x3ixm04f5wj7/yf23z4/public.ics",
             format: "ics",
         },
         eventDisplay: "list-item",
