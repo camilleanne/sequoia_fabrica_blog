@@ -121,7 +121,7 @@ Options:
 # Contributions
 
 Updates for Sequioa Fabrica made by
-* [Camille Teicheira](https://camileanne.com)
+* [Camille Teicheira](http://camileanne.com)
 
 The Solar v.2 theme was made by
 
