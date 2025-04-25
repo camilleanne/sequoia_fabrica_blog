@@ -24,6 +24,9 @@ defaults:
   run:
     shell: bash
 
+# TODO: deprecate in favor of `deploy-site.yml`
+# or, keep this around as a preview? TBD
+
 jobs:
   # Build job
   build:
