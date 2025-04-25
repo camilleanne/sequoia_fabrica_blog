@@ -4,15 +4,16 @@
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate.html
 # Updated 2025 by Camille Teicheira for Sequioa Fabrica
 
-import hitherdither
-import os
 import argparse
-import shutil
-from PIL import Image, ImageOps
 import logging
+import math
+import os
+import shutil
 from dataclasses import dataclass
 from enum import Enum
-import math
+
+import hitherdither
+from PIL import Image, ImageOps
 
 
 @dataclass

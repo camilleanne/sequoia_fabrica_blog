@@ -3,10 +3,9 @@
 # see https://www.gnu.org/licenses/agpl-3.0.html
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate.html 
 
-import os
 import argparse
 import logging
-
+import os
 
 parser = argparse.ArgumentParser(
     """

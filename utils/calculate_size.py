@@ -3,13 +3,13 @@
 # see https://www.gnu.org/licenses/agpl-3.0.html
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate.html 
 
-import os
 import argparse
-import shutil
-from bs4 import BeautifulSoup
 import logging
+import os
+import shutil
 import sys
 
+from bs4 import BeautifulSoup
 
 parser = argparse.ArgumentParser(
     """
