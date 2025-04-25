@@ -76,8 +76,8 @@ echo "Rebuilding the site"
 cd $repoDir
 
 echo "Dithering new images"
-# TODO: colorize requires updates to "categories" (still configured for lowtech mag)
-python3 utils/dither_images.py -d $contentDir # --colorize
+
+python3 utils/dither_images.py -d $contentDir --preserve-color
 
 echo "Generating site"
 hugo --baseURL $baseURL --destination $outputDir --ignoreCache --environment production --minify
