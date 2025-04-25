@@ -1,11 +1,14 @@
-# Solar v.2
+# [Solar v.2](https://github.com/lowtechmag/solar_v2) for Sequioa Fabrica
 
-- Rebuild of Low-tech Magazine's Solar theme with Hugo
-- Updated for the Sequioia Fabrica use (removed localization to reduce complexity)
-- Builds the entire site in minutes rather than hours :)
-- Makes use of additional taxonomies that are possible in Hugo
+- Rebuild of [Low-tech Magazine's Solar theme with Hugo](https://github.com/lowtechmag/solar_v2)
+- Updated for the Sequioia Fabrica usecase
+  - removed localization to reduce complexity
+  - blog is now just a component of website, instead of main focus
+  - added an events calendar
+  - update to build scripts to be more generalized
+  - builds + deploys static site with github actions
 
-Requires Hugo 0.145 or newer!
+Requires [Hugo 0.145](https://gohugo.io/) or newer! ([installation instructions](https://gohugo.io/installation/))
 
 ## Local Development
 ```
@@ -70,12 +73,27 @@ Remove all dithered files in the subdirectories of `content`:
 This script recursively traverses folders and enumerates the file size of all html pages and associated media.
 The calculated total file size is then added to the HTML page. The script looks for a `div` with class `page-size` to add the page metadata in to. This div is currently found in `layouts/partials/footer.html`
 
-#### Usage
-
 This script should be run *after* the site has been generated on the resulting files. It is a post-processing step.
 In the case of Hugo, this is usually the directory called `public`. Add the baseurl that you also use in production:
 
-`python3 utils/calculate_size.py --directory public/ --baseURL https://solar.lowtechmagazine.com`
+```bash
+❯ python3 utils/calculate_size.py --help
+usage:
+    This script recursively traverses folders and enumerates the file size of all html pages and associated media.
+    The calculated total file size is then added to the HTML page.
+
+       [-h] [-d DIRECTORY] [-rm] [-b BASEURL] [-v]
+
+options:
+  -h, --help            show this help message and exit
+  -d DIRECTORY, --directory DIRECTORY
+                        Set the directory to traverse
+  -rm, --remove         Removes all the folders with dithers and their contents
+  -b BASEURL, --baseURL BASEURL
+                        hostname (and path) to the root, e.g. https://solar.lowtechmagazine.com
+  -v, --verbose         Print out more detailed information about what this script is doing
+```
+
 
 ## build_site.sh
 
