@@ -317,7 +317,7 @@ if __name__ == "__main__":
                             color_settings=ColorSettings()
                             if args.preserve_color
                             else None,
-                            max_size=(int(args.max_size), int(args.max_size)),
+                            thumbnail_size=(int(args.max_size), int(args.max_size)),
                         )
 
                     else:
