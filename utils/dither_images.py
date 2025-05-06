@@ -11,6 +11,7 @@ import os
 import shutil
 from dataclasses import dataclass
 from enum import Enum
+from typing import Tuple
 
 import hitherdither
 from PIL import Image, ImageOps
@@ -97,17 +98,26 @@ def colorize(source_image, category):
 
 
 def dither_image(
-    source_image,
-    output_image,
+    source_image: str,
+    output_image: str,
     colorize_by_category: CategoryEnum = None,
     color_settings: ColorSettings = None,
     method="bayer",
+    thumbnail_size: Tuple[int] = (800, 800),
 ):
     # see hitherdither docs for different dithering algos and settings
     try:
-        img = Image.open(source_image).convert("RGB")
+        img = Image.open(source_image)
+        if img.has_transparency_data:
+            img = img.convert("RGBA")
+            background = Image.new("RGBA", img.size, (255, 255, 255))
+            alpha_composite = Image.alpha_composite(background, img)
+            img = alpha_composite.convert("RGB")
+        else:
+            img = img.convert("RGB")
+
         # make image smaller
-        img.thumbnail((800, 800), Image.LANCZOS)
+        img.thumbnail(thumbnail_size, Image.LANCZOS)
 
         if colorize_by_category:
             palette = colorize(source_image, colorize_by_category)
@@ -153,8 +163,9 @@ def dither_image(
         )
 
     except Exception as e:
-        logging.debug("❌ failed to convert {}".format(source_image))
-        logging.debug(e)
+        print("err")
+        logging.warning("❌ failed to convert {}".format(source_image))
+        logging.warning(e)
 
 
 def delete_dithers(content_dir):
@@ -220,6 +231,28 @@ if __name__ == "__main__":
         action="store_true",
     )
 
+    parser.add_argument(
+        "-o",
+        "--overwrite",
+        help="Overwrite dithers if they already exist",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "-ft",
+        "--file-type",
+        help="Output filetype for images",
+        default="png",
+        choices=["png", "webp"],
+    )
+
+    parser.add_argument(
+        "-ms",
+        "--max-size",
+        help="Maximum width and height of the dithered image in pixels",
+        default=800,
+    )
+
     args = parser.parse_args()
 
     image_ext = [".jpg", ".JPG", ".jpeg", ".png", ".gif", ".webp", ".tiff", ".bmp"]
@@ -238,6 +271,7 @@ if __name__ == "__main__":
 
     prev_root = None
 
+    image_count = {"dithered": 0, "total": 0}
     if args.remove:
         delete_dithers(os.path.abspath(content_dir))
     else:
@@ -270,9 +304,12 @@ if __name__ == "__main__":
                     file_, ext = os.path.splitext(fname)
                     source_image = os.path.join(root, fname)
                     output_image = os.path.join(
-                        os.path.join(root, "dithers"), file_ + "_dithered.png"
+                        os.path.join(root, "dithers"),
+                        file_ + f"_dithered.{args.file_type}",
                     )
-                    if not os.path.exists(output_image):
+                    if not os.path.exists(output_image) or args.overwrite:
+                        image_count["dithered"] += 1
+                        image_count["total"] += 1
                         dither_image(
                             source_image=source_image,
                             output_image=output_image,
@@ -280,11 +317,15 @@ if __name__ == "__main__":
                             color_settings=ColorSettings()
                             if args.preserve_color
                             else None,
+                            max_size=(int(args.max_size), int(args.max_size)),
                         )
 
                     else:
+                        image_count["total"] += 1
                         logging.debug(f"Dithered version of {fname} found, skipping")
 
             prev_root = root
 
-    logging.info("Done dithering")
+    logging.info(
+        f"Done dithering. Dithered {image_count['dithered']}/{image_count['total']} images."
+    )

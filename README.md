@@ -61,6 +61,7 @@ depends on
 * bug: images taller than wide are rotated when the 800x800 thumbnail is made
 * bug: images smaller than 800x800 are scaled _up_
 * bug: pngs with transparency turn transparent areas black
+* feature: configurable image size
 
 ### Usage
 

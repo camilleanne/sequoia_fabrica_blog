@@ -48,26 +48,6 @@ echo ""
 now=`date`
 now_seconds=`date +%s`
 
-# # TODO: do I want to keep this?
-
-# while getopts f flag
-# do
-#     case "${flag}" in
-#         f) updated="forced rebuild";;
-#     esac
-# done
-
-# if [[ $updated != "forced rebuild" ]]; then
-#         echo "Checking for update $now"
-#         updated=$(git -C $repoDir pull origin main)
-# fi
-
-# if  echo $updated | grep -q "Already up to date";
-# then
-#         echo "Git up to date $now"
-# else
-#         echo "Git was not up to date"
-# fi
 mkdir -p $outputDir
 
 echo $updated
